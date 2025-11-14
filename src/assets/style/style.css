@@ -1,0 +1,259 @@
+/* Global layout overrides */
+body {
+  background: radial-gradient(circle at top, #1b1b1f 0%, #050509 55%, #000000 100%);
+  color: #f8f9fa;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden; /* prevent accidental horizontal scroll on all pages */
+}
+
+.audio-shop {
+  background: radial-gradient(circle at top, #181823 0%, #050509 45%, #000000 100%);
+}
+
+.audio-shop .navbar {
+  backdrop-filter: blur(12px);
+  background: linear-gradient(90deg, rgba(0, 0, 0, 0.95), rgba(19, 19, 27, 0.95));
+}
+
+.audio-shop .navbar-brand {
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.audio-shop .nav-link {
+  color: #cfd3ff;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+.audio-shop .nav-link:hover,
+.audio-shop .nav-link:focus {
+  color: #ffc857;
+}
+
+/* Hero section */
+.hero-section {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+
+.hero-section .display-4 {
+  line-height: 1.1;
+}
+
+.hero-section .lead {
+  max-width: 32rem;
+}
+
+.hero-card {
+  background: radial-gradient(circle at top left, #272838 0%, #121218 40%, #050509 100%);
+  border-radius: 1.75rem;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.6);
+}
+
+.hero-card h2 {
+  color: #ffffff;
+}
+
+.hero-card ul li::marker {
+  color: #ffc857;
+}
+
+/* Featured cards */
+.audio-shop .card {
+  border-radius: 1.25rem;
+  background: radial-gradient(circle at top, #1e1e26 0%, #050509 70%);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+.audio-shop .card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 18px 45px rgba(0, 0, 0, 0.7);
+  border-color: rgba(255, 200, 87, 0.6);
+}
+
+.audio-shop .card-title {
+  font-weight: 600;
+}
+
+/* Product card images: force consistent size across all product grids
+   All product pages (Shop, Wireless, Headphones, Speakers, Microphones, Accessories, Portable)
+   use a Bootstrap .ratio wrapper with <img class="w-100 h-100 object-fit-cover" /> */
+.audio-shop .ratio img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Category tiles */
+.category-tile {
+  background: radial-gradient(circle at top, #20202c 0%, #090910 70%);
+  border-color: rgba(255, 255, 255, 0.16);
+  transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.category-tile:hover {
+  transform: translateY(-4px);
+  border-color: #ffc857;
+  box-shadow: 0 14px 40px rgba(0, 0, 0, 0.65);
+}
+
+.category-tile h5 {
+  margin-bottom: 0.35rem;
+}
+
+/* Deals section */
+.deal-badge {
+  background: radial-gradient(circle at center, rgba(255, 200, 87, 0.12) 0%, rgba(0, 0, 0, 0.9) 55%);
+}
+
+.deal-badge .display-6 {
+  letter-spacing: 0.12em;
+}
+
+/* Buttons */
+.audio-shop .btn-warning {
+  background: linear-gradient(135deg, #ffc857, #ff9800);
+  border: none;
+  color: #1d1300;
+  font-weight: 600;
+  box-shadow: 0 10px 30px rgba(255, 152, 0, 0.4);
+}
+
+.audio-shop .btn-warning:hover {
+  filter: brightness(1.05);
+  box-shadow: 0 12px 38px rgba(255, 152, 0, 0.55);
+}
+
+.audio-shop .btn-outline-light {
+  border-width: 1px;
+}
+
+/* Footer */
+.audio-shop footer {
+  background: linear-gradient(90deg, #050509, #151520);
+}
+
+.audio-shop footer h5,
+.audio-shop footer h6 {
+  color: #ffffff;
+}
+
+.audio-shop footer p,
+.audio-shop footer span {
+  font-size: 0.8rem;
+}
+
+.audio-shop footer a {
+  color: #888ea8;
+}
+
+.audio-shop footer a:hover {
+  color: #ffc857;
+}
+
+.audio-shop footer .btn-warning {
+  font-size: 0.8rem;
+}
+
+.audio-shop footer .border-top {
+  border-color: rgba(255, 255, 255, 0.12) !important;
+}
+
+/* Utility tweaks */
+@media (max-width: 767.98px) {
+  .hero-section {
+    text-align: center;
+  }
+
+  .hero-section .d-flex {
+    justify-content: center;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Ensure main layout containers never cause horizontal overflow */
+.audio-shop,
+.audio-shop .container,
+.audio-shop .container-fluid {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+/* ------------------------------------------------------------------ */
+/* Responsive tweaks for all devices                                  */
+/* ------------------------------------------------------------------ */
+
+/* Small phones & portrait devices (<576px) */
+@media (max-width: 575.98px) {
+  .audio-shop .navbar {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .hero-section {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+  }
+
+  .hero-section .display-4,
+  .audio-shop h1.display-5,
+  .audio-shop .display-5 {
+    font-size: 1.9rem;
+    line-height: 1.2;
+  }
+
+  .audio-shop .card {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .audio-shop section.container,
+  .audio-shop .container {
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
+  }
+}
+
+/* Small tablets (576px–767.98px) */
+@media (min-width: 576px) and (max-width: 767.98px) {
+  .audio-shop .navbar {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+
+  .hero-section {
+    padding-top: 3.5rem;
+    padding-bottom: 3.5rem;
+  }
+}
+
+/* Tablets & small laptops (768px–991.98px) */
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .audio-shop .navbar {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+
+  .hero-section {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+  }
+}
+
+/* Larger desktops (>=1200px): keep content nicely centered */
+@media (min-width: 1200px) {
+  .audio-shop .container {
+    max-width: 1140px;
+  }
+}
+
