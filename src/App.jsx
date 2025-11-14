@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { HashRouter, Routes, Route } from 'react-router-dom';
 import Index from './components/Index.jsx';
 import Featured from './components/Featured.jsx';
 import Categories from './components/Categories.jsx';
@@ -20,7 +20,7 @@ import Checkout from './components/Checkout.jsx';
 
 function App() {
   return (
-    <BrowserRouter basename={import.meta.env.BASE_URL}>
+    <HashRouter>
       <Routes>
         <Route path="/" element={<Index />} />
         <Route path="/featured" element={<Featured />} />
@@ -41,7 +41,7 @@ function App() {
         <Route path="/specialist" element={<Specialist />} />
         <Route path="/checkout" element={<Checkout />} />
       </Routes>
-    </BrowserRouter>
+    </HashRouter>
   );
 }
 
