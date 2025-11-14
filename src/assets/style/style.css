@@ -1,11 +1,13 @@
 /* Global layout overrides */
+html,
 body {
   background: radial-gradient(circle at top, #1b1b1f 0%, #050509 55%, #000000 100%);
   color: #f8f9fa;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
   margin: 0;
   padding: 0;
-  overflow-x: hidden; /* prevent accidental horizontal scroll on all pages */
+  max-width: 100vw;
+  overflow-x: hidden; /* prevent any horizontal scroll on all pages */
 }
 
 .audio-shop {
@@ -187,6 +189,13 @@ html {
 .audio-shop .container-fluid {
   max-width: 100%;
   overflow-x: hidden;
+}
+
+/* Media elements should never overflow horizontally */
+img,
+video,
+canvas {
+  max-width: 100%;
 }
 
 /* ------------------------------------------------------------------ */

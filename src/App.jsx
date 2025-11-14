@@ -20,7 +20,7 @@ import Checkout from './components/Checkout.jsx';
 
 function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename={import.meta.env.BASE_URL}>
       <Routes>
         <Route path="/" element={<Index />} />
         <Route path="/featured" element={<Featured />} />
